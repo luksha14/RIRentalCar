@@ -1,0 +1,31 @@
+﻿<Page x:Class="RIRentalCar.DeleteCarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RIRentalCar"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DeleteCarPage">
+
+    <Grid Margin="10">
+        <TextBlock Text="List of the Cars for deleting:" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+        <ListBox x:Name="CarListBox" Margin="0,40,0,100">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Model, StringFormat='Model: {0}'}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Year, StringFormat='Year: {0}'}"/>
+                            <TextBlock Text="{Binding PricePerDay, StringFormat='Price per day: {0} €'}"/>
+                            <Button Content="Delete" HorizontalAlignment="Right" Click="DeleteCarButton_Click" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Content="Back to Main Menu" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="BackToMainPageButton_Click"/>
+    </Grid>
+</Page>

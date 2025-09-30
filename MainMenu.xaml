@@ -1,0 +1,40 @@
+﻿<Page x:Class="RIRentalCar.MainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RIRentalCar"
+             mc:Ignorable="d" d:DesignWidth="800" Height="511">
+    <Canvas Background="LightGray" Margin="0,0,0,-36">
+        <Image Source="C:\Users\HP\OneDrive\Radna površina\Inf 2\Objektno programiranje\Zavrsni_ispit_finale\RIRentalCar\RIRentalCar\Images\line_gui.png"
+               Stretch="Fill" Height="9" Canvas.Top="240" Width="141"/>
+        <Image Source="C:\Users\HP\OneDrive\Radna površina\Inf 2\Objektno programiranje\Zavrsni_ispit_finale\RIRentalCar\RIRentalCar\Images\line_gui.png"
+                Stretch="Fill" Margin="244,232,315,200"/>
+        <Image Source="C:\Users\HP\OneDrive\Radna površina\Inf 2\Objektno programiranje\Zavrsni_ispit_finale\RIRentalCar\RIRentalCar\Images\line_gui.png"
+                Stretch="Fill" Height="17" Canvas.Left="607" Canvas.Top="232" Width="193"/>
+        <Image Source="C:\Users\HP\OneDrive\Radna površina\Inf 2\Objektno programiranje\Zavrsni_ispit_finale\RIRentalCar\RIRentalCar\Images\izlaz2.png"
+               Stretch="Fill" Canvas.Left="338" Canvas.Top="422" HorizontalAlignment="Center" VerticalAlignment="Top" Width="168" Height="76" Panel.ZIndex="1" MouseLeftButtonUp="ExitImage_MouseLeftButtonUp" RenderTransformOrigin="0.5,0.5" MouseEnter="ExitImage_MouseEnter" MouseLeave="ExitImage_MouseLeave">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.144"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="Exit" Foreground="White" FontSize="16" FontWeight="Bold" Canvas.Left="400" Canvas.Top="440" Width="51" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.ZIndex="2" IsHitTestVisible="False"/>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="518" Margin="12,96,0,0">
+
+            <Button Content="Reserve the Car" Height="40" Margin="0,0,0,10" Click="ReservationButton_Click"/>
+            <Button Content="Avaliable Cars" Height="40" Margin="0,0,0,10" Click="ShowCarsButton_Click"/>
+            <Button Content="Input Review" Height="40" Margin="0,0,0,10" Click="AddReviewButton_Click"/>
+            <Button Content="Reviews" Height="40" Margin="0,0,0,10" Click="ViewReviewsButton_Click"/>
+            <Button Content="Add Car (Admin only)" Height="40" Margin="0,0,0,10" Click="AddCarButton_Click"/>
+            <Button Content="Delete Car (Admin only)" Height="40" Margin="0,0,0,10" Click="DeleteCarButton_Click"/>
+        </StackPanel>
+        <TextBlock Text="Welcome to the Application for Car renting" 
+                       FontSize="20" FontWeight="Bold" TextAlignment="Center" Margin="141,15,141,408"/>
+    </Canvas>
+</Page>
